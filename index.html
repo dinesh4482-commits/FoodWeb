@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Drink & Dine — a modern multi-cuisine restaurant." />
+  <title>Drink & Dine | Multi-Cuisine Restaurant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header" id="home">
+    <nav class="navbar container">
+      <a class="brand" href="#home" aria-label="Drink and Dine home">
+        <span class="brand-mark">S</span>
+        <span><strong>Drink</strong> & Dine</span>
+      </a>
+      <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+        <button class="btn btn-small" data-scroll="#reservation">Book a Table</button>
+      </div>
+    </nav>
+
+    <section class="hero container">
+      <div class="hero-copy">
+        <span class="eyebrow">EST. 2018 · MUMBAI</span>
+        <h1>A table full of<br><em>stories & flavours.</em></h1>
+        <p>A modern multi-cuisine kitchen where Indian soul meets global inspiration, served with warmth, craft and a little theatre.</p>
+        <div class="hero-actions">
+          <button class="btn" data-scroll="#menu">Explore Menu <span>→</span></button>
+          <button class="text-btn" data-scroll="#about">Our Story <span>↗</span></button>
+        </div>
+        <div class="hero-meta">
+          <span>★ 4.9 <small>guest rating</small></span>
+          <span>•</span>
+          <span>45+ <small>signature dishes</small></span>
+          <span>•</span>
+          <span>11 AM–11:30 PM <small>daily</small></span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card main-food">
+          <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1200&q=85" alt="Colourful gourmet salad bowl">
+          <div class="image-caption"><span>Chef's table</span><strong>Seasonal tasting</strong></div>
+        </div>
+        <div class="floating-card">
+          <span class="spark">✦</span>
+          <div><strong>Chef's pick</strong><br><span>Truffle Butter Naan</span></div>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="trust-strip">
+      <div class="container trust-grid">
+        <span>LOCALLY SOURCED</span><span>FAMILY FRIENDLY</span><span>VEGAN OPTIONS</span><span>PRIVATE DINING</span><span>FRESH EVERY DAY</span>
+      </div>
+    </section>
+
+    <section class="section container about" id="about">
+      <div class="section-image">
+        <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1000&q=85" alt="Chef preparing a dish in a restaurant kitchen">
+        <div class="image-note">“Good food slows<br>time down.”</div>
+      </div>
+      <div class="section-copy">
+        <span class="eyebrow">OUR STORY</span>
+        <h2>Made for <em>curious</em> appetites.</h2>
+        <p>We started with one simple idea: a restaurant should feel like a great dinner party. Our kitchen travels across continents, bringing together familiar comfort and unexpected combinations.</p>
+        <p>Every plate is built around seasonal ingredients, thoughtful technique and the joy of sharing. Come hungry. Leave with a story.</p>
+        <div class="stat-row">
+          <div><strong>8+</strong><span>Years of craft</span></div>
+          <div><strong>14</strong><span>Cuisines explored</span></div>
+          <div><strong>3</strong><span>Chef-led menus</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section menu-section" id="menu">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">THE MENU</span>
+            <h2>Pick a mood. <em>Pick a flavour.</em></h2>
+          </div>
+          <p>From Indian classics to Asian favourites and European comfort food, our menu is designed for mixing, matching and sharing.</p>
+        </div>
+
+        <div class="cuisine-tabs" role="tablist">
+          <button class="cuisine-tab active" data-cuisine="all">All</button>
+          <button class="cuisine-tab" data-cuisine="indian">Indian</button>
+          <button class="cuisine-tab" data-cuisine="asian">Asian</button>
+          <button class="cuisine-tab" data-cuisine="italian">Italian</button>
+          <button class="cuisine-tab" data-cuisine="continental">Continental</button>
+          <button class="cuisine-tab" data-cuisine="desserts">Desserts</button>
+        </div>
+
+        <div class="menu-grid" id="menuGrid"></div>
+        <div class="menu-footer">
+          <button class="btn btn-outline" id="loadMore">View full menu <span>↓</span></button>
+          <span id="menuCount"></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience" id="experience">
+      <div class="container experience-inner">
+        <div>
+          <span class="eyebrow">MORE THAN A MEAL</span>
+          <h2>Make it <em>memorable.</em></h2>
+          <p>Celebrate, connect, discover — our spaces and experiences are made for moments worth remembering.</p>
+        </div>
+        <div class="experience-cards">
+          <article><span>01</span><h3>Chef's Table</h3><p>A 7-course surprise menu served right at the counter.</p><button data-scroll="#reservation">Reserve →</button></article>
+          <article><span>02</span><h3>Secret Supper</h3><p>One monthly menu. No previews. Just trust your appetite.</p><button id="secretSupper">Join waitlist →</button></article>
+          <article><span>03</span><h3>Private Dining</h3><p>Intimate celebrations with a menu crafted for your group.</p><button data-scroll="#contact">Enquire →</button></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section signature container">
+      <div class="section-heading">
+        <div><span class="eyebrow">WHY GUESTS RETURN</span><h2>Little details. <em>Big difference.</em></h2></div>
+      </div>
+      <div class="feature-grid">
+        <article><span class="feature-icon">♨</span><h3>Open Kitchen</h3><p>See the craft, hear the sizzle and meet the people behind your plate.</p></article>
+        <article><span class="feature-icon">✦</span><h3>Dish Passport</h3><p>Collect stamps across cuisines and unlock a complimentary chef's special.</p></article>
+        <article><span class="feature-icon">◒</span><h3>Smart Pairings</h3><p>Tell us your mood and we'll suggest a dish pairing from our menu.</p></article>
+        <article><span class="feature-icon">♡</span><h3>Diet-Friendly</h3><p>Vegetarian, vegan and gluten-aware choices are clearly marked.</p></article>
+      </div>
+    </section>
+
+    <section class="reservation section" id="reservation">
+      <div class="container reservation-box">
+        <div>
+          <span class="eyebrow">YOUR TABLE AWAITS</span>
+          <h2>Let's make tonight <em>delicious.</em></h2>
+          <p>Book your table in a few clicks. We'll take care of the rest.</p>
+        </div>
+        <form id="bookingForm" class="booking-form">
+          <label>Date <input type="date" id="date" required></label>
+          <label>Guests
+            <select id="guests"><option>2 Guests</option><option>3 Guests</option><option>4 Guests</option><option>5 Guests</option><option>6+ Guests</option></select>
+          </label>
+          <label>Time
+            <select id="time"><option>7:00 PM</option><option>7:30 PM</option><option>8:00 PM</option><option>8:30 PM</option><option>9:00 PM</option></select>
+          </label>
+          <button class="btn" type="submit">Check availability →</button>
+        </form>
+        <p class="form-message" id="formMessage" role="status"></p>
+      </div>
+    </section>
+
+    <section class="section testimonials container">
+      <div class="section-heading centered">
+        <span class="eyebrow">FROM OUR GUESTS</span>
+        <h2>Kind words, <em>served daily.</em></h2>
+      </div>
+      <div class="testimonial-slider">
+        <button class="slider-btn" id="prevReview" aria-label="Previous review">←</button>
+        <blockquote id="reviewText"></blockquote>
+        <button class="slider-btn" id="nextReview" aria-label="Next review">→</button>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="container footer-grid">
+      <div><a class="brand" href="#home"><span class="brand-mark">S</span><span><strong>Drink</strong> & Dine</span></a><p>Good food. Good people.<br>Good stories.</p></div>
+      <div><h4>Visit</h4><p>12 Palm Avenue, Bandra West<br>Mumbai, Maharashtra</p><p>+91 98765 43210</p></div>
+      <div><h4>Hours</h4><p>Mon–Thu · 11:00 AM–11:00 PM<br>Fri–Sun · 11:00 AM–11:30 PM</p></div>
+      <div><h4>Follow</h4><div class="socials"><a href="#" aria-label="Instagram">IG</a><a href="#" aria-label="Facebook">FB</a><a href="#" aria-label="X">X</a></div></div>
+    </div>
+    <div class="container copyright">© 2026 Drink & Dine · Crafted with flavour.</div>
+  </footer>
+
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+      <span class="eyebrow">Drink & Dine</span>
+      <h2 id="modalTitle">Welcome</h2>
+      <p id="modalText"></p>
+      <button class="btn" id="modalAction">Done</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
